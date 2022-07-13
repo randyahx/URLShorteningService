@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/URLShorteningService/static/css/main.e6c13ad2.css",
-    "main.js": "/URLShorteningService/static/js/main.798c0b52.js",
+    "main.js": "/URLShorteningService/static/js/main.da5d563f.js",
     "index.html": "/URLShorteningService/index.html",
     "main.e6c13ad2.css.map": "/URLShorteningService/static/css/main.e6c13ad2.css.map",
-    "main.798c0b52.js.map": "/URLShorteningService/static/js/main.798c0b52.js.map"
+    "main.da5d563f.js.map": "/URLShorteningService/static/js/main.da5d563f.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.798c0b52.js"
+    "static/js/main.da5d563f.js"
   ]
 }
