@@ -29,7 +29,7 @@ export const LandingPage = () => {
             redirect: 'follow'
         };
         
-        let response = await fetch("http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/create", requestOptions)
+        let response = await fetch("https://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/create", requestOptions)
         .then(json => json.json())
         .then(data => {
             console.log(data)
