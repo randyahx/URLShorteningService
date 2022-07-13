@@ -29,7 +29,7 @@ export const LandingPage = () => {
             redirect: 'follow'
         };
         
-        let response = await fetch("https://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/create", requestOptions)
+        let response = await fetch("https://crossorigin.me/http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/create", requestOptions)
         .then(json => json.json())
         .then(data => {
             console.log(data)
@@ -39,7 +39,6 @@ export const LandingPage = () => {
         .catch(error => setError(error))
     }
 
-    useEffect(() => console.log(createdUrlList), createdUrlList)
 
     return (
         <form method="POST" onSubmit={handleSubmit}>
@@ -65,7 +64,7 @@ export const LandingPage = () => {
                             <HStack>
                                 <Text key={key}>Original URL: {key}</Text>
                                 <Text key={value}>Shortened URL:  
-                                    <Link href={"http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/" + [value]} color="blue">http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/{value} </Link>
+                                    <Link key={"link"+value}href={"http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/" + [value]} color="blue">http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/{value} </Link>
                                 </Text>
                             </HStack>
                         )
