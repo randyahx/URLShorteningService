@@ -43,7 +43,7 @@ export const LandingPage = () => {
 
     return (
         <form method="POST" onSubmit={handleSubmit}>
-            <Stack maxWidth="60%" margin="auto" marginTop="20%" spacing={3}>
+            <Stack maxWidth="60%" margin="auto" marginTop="15%" spacing={3}>
                     <Box> 
                         <Header text="URL Shortener"/>     
                         <Text fontSize='lg'>Enter a URL to generate a shortened version</Text> 
