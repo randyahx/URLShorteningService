@@ -1,7 +1,5 @@
 import { Header } from "../components/Header"
-import { SubmitButton } from "../components/SubmitButton"
-import { Textbox } from "../components/Textbox"
-import { Box, Button, FormControl, FormErrorMessage, FormHelperText, HStack, Input, Link, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, FormControl, HStack, Input, Link, Stack, Text } from '@chakra-ui/react'
 import { useEffect, useState } from "react"
 
 
