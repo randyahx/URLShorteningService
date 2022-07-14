@@ -1,6 +1,5 @@
-import { Header } from "../components/Header"
-import { Box, Button, FormControl, HStack, Input, Link, Stack, Text } from '@chakra-ui/react'
-import { useEffect, useState } from "react"
+import { Box, Button, FormControl, Heading, HStack, Input, Link, Stack, Text } from '@chakra-ui/react'
+import { useState } from "react"
 
 
 export const LandingPage = () => {
@@ -26,10 +25,10 @@ export const LandingPage = () => {
             method: 'POST',
             headers: myHeaders,
             body: urlencoded,
-            redirect: 'follow'
+            redirect: 'follow',
         };
-        
-        let response = await fetch("https://crossorigin.me/http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/create", requestOptions)
+
+        let response = await fetch("https://cors-anywhere.herokuapp.com/http://localhost:8081/create", requestOptions)
         .then(json => json.json())
         .then(data => {
             console.log(data)
@@ -39,12 +38,11 @@ export const LandingPage = () => {
         .catch(error => setError(error))
     }
 
-
     return (
         <form method="POST" onSubmit={handleSubmit}>
-            <Stack maxWidth="60%" margin="auto" marginTop="15%" spacing={3}>
+            <Stack maxWidth="60%" margin="auto" marginTop="20%" spacing={3}>
                     <Box> 
-                        <Header text="URL Shortener"/>     
+                        <Heading as='h2' size='xl'>URL Shortener</Heading> 
                         <Text fontSize='lg'>Enter a URL to generate a shortened version</Text> 
                     </Box> 
                     <FormControl isInvalid={isError}>
@@ -64,7 +62,7 @@ export const LandingPage = () => {
                             <HStack>
                                 <Text key={key}>Original URL: {key}</Text>
                                 <Text key={value}>Shortened URL:  
-                                    <Link key={"link"+value}href={"http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/" + [value]} color="blue">http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/{value} </Link>
+                                    <Link href={"http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/" + [value]} color="blue">http://ec2-54-255-49-140.ap-southeast-1.compute.amazonaws.com:8081/{value} </Link>
                                 </Text>
                             </HStack>
                         )
